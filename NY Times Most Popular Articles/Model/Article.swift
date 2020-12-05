@@ -10,8 +10,6 @@
 struct Articles: Decodable {
     var results: [Article]
 }
-
-
 struct Article: Decodable {
     var title: String
     var byline: String
@@ -34,8 +32,6 @@ struct ArticleMedia: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         mediaMetadata = try container.decode([ArticleMediaMetaData].self, forKey: .mediaMetadata)
     }
-    
-    
 }
 
 struct ArticleMediaMetaData: Decodable {
